@@ -28,7 +28,7 @@
     <licenses>
         <license>
             <name>The Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
 
@@ -37,13 +37,13 @@
             <name>Valentin Olteanu</name>
             <email>valentin.olteanu@adobe.com</email>
             <organization>Adobe</organization>
-            <organizationUrl>http://opensource.adobe.com/</organizationUrl>
+            <organizationUrl>https://opensource.adobe.com/</organizationUrl>
         </developer>
         <developer>
             <name>Andrei Dulvac</name>
             <email>andrei.dulvac@adobe.com</email>
             <organization>Adobe</organization>
-            <organizationUrl>http://opensource.adobe.com/</organizationUrl>
+            <organizationUrl>https://opensource.adobe.com/</organizationUrl>
         </developer>
     </developers>
 
@@ -217,7 +217,7 @@
         <dependency>
             <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.testing.clients</artifactId>
-            <version>3.0.22</version>
+            <version>3.0.24</version>
             <exclusions>
                 <!-- A newer version of servlet-api is included in the dependencies below -->
                 <exclusion>
@@ -323,6 +323,48 @@
             <groupId>com.sparkjava</groupId>
             <artifactId>spark-core</artifactId>
             <version>2.9.4</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-http</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-server</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-util</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-xml</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-http</artifactId>
+            <version>9.4.54.v20240208</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>9.4.54.v20240208</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-util</artifactId>
+            <version>9.4.54.v20240208</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-xml</artifactId>
+            <version>9.4.54.v20240208</version>
             <scope>test</scope>
         </dependency>
 

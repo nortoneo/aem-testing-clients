@@ -36,6 +36,7 @@ import java.io.InputStream;
 import java.net.URI;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -475,7 +476,7 @@ public class PackageManagerClient extends CQClient {
         private static Date getJsonDateSafely(JsonNode node, String attr) {
             try {
                 String dateAsString = node.get(attr).textValue();
-                return new SimpleDateFormat("E MMM dd yyyy HH:mm:ss 'GMT'z").parse(dateAsString);
+                return new SimpleDateFormat("E MMM dd yyyy HH:mm:ss 'GMT'z", Locale.ENGLISH).parse(dateAsString);
             } catch (Exception e) {
                 return null;
             }

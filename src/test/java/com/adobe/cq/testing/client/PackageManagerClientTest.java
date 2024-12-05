@@ -63,7 +63,7 @@ public class PackageManagerClientTest {
 
         PackageManagerClient.Package p = PackageManagerClient.Package.build(PACKAGE_JSON);
 
-        DateFormat df = new SimpleDateFormat("dd MMM yyyy kk:mm:ss z");
+        DateFormat df = new SimpleDateFormat("dd MMM yyyy kk:mm:ss z", Locale.ENGLISH);
         df.setTimeZone(TimeZone.getTimeZone("GMT"));
 
         assertEquals("adminUnwrappedBy", p.getLastUnwrappedBy());
@@ -99,7 +99,7 @@ public class PackageManagerClientTest {
 
         PackageManagerClient.Package p = PackageManagerClient.Package.build(SMALL_PACKAGE_JSON);
 
-        DateFormat df = new SimpleDateFormat("dd MMM yyyy kk:mm:ss z");
+        DateFormat df = new SimpleDateFormat("dd MMM yyyy kk:mm:ss z", Locale.ENGLISH);
         df.setTimeZone(TimeZone.getTimeZone("GMT"));
 
         assertEquals(null, p.getLastUnwrappedBy());

@@ -6,6 +6,10 @@
 # AEM testing clients
 HTTP testing clients and utilities for AEM, based on [sling.testing.clients](https://github.com/apache/sling-org-apache-sling-testing-clients).
 
+> [!NOTE]
+> Only the branch `aem-cloud` in this repository is being maintained.
+> Older version branches might be kept for history only.
+
 ## How to use
 Add the following dependency to your tests project to start writing integration tests:
 ```xml
